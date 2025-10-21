@@ -51,6 +51,10 @@ export default function Navbar() {
 
         {/* Tools */}
         <div className="nav-tools">
+          <NavLink to="/emergency" className="emergency-pill small">
+            <span className="emergency-icon">🚨</span>
+            <span>{language === 'en' ? 'Emergency' : 'Tšhogo'}</span>
+          </NavLink>
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

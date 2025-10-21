@@ -5,7 +5,7 @@ import { AppProvider } from "./utils/AppContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ChatbotWidget from "./components/ChatbotWidget";
-import "./styles/App.css"; // Make sure you have your CSS file
+import VoiceAssistant from "./components/VoiceAssistant";
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
           </main>
           <Footer />
           <ChatbotWidget />
+          <VoiceAssistant />
         </div>
       </BrowserRouter>
     </AppProvider>

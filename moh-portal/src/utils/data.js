@@ -135,7 +135,7 @@ export const hospitals = [
 export const announcements = [
   { id: 1, title: "National Health Week", summary: "Free screening across districts from 1-7 Nov." },
   { id: 2, title: "Immunisation Drive", summary: "Child immunisation schedule updates." },
-  { id: 3, title: "COVID-19 Booster Campaign", summary: "Booster shots available at all health facilities." }
+  
 ];
 
 // Quick Stats

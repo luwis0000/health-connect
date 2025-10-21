@@ -9,35 +9,6 @@ export default function Footer() {
 
   return (
     <footer className="site-footer">
-      {/* Emergency Section */}
-      <div className="footer-emergency">
-        <div className="emergency-content">
-          <div className="emergency-info">
-            <div className="emergency-icon">🚨</div>
-            <div className="emergency-text">
-              <h3>{language === 'en' ? 'Emergency Contacts' : 'Dikgolagano tša Tšhogo'}</h3>
-              <div className="emergency-numbers">
-                <div className="emergency-item">
-                  <span className="number-label">{language === 'en' ? 'Ambulance' : 'Ambalese'}:</span>
-                  <span className="number-value">997</span>
-                </div>
-                <div className="emergency-item">
-                  <span className="number-label">{language === 'en' ? 'Police' : 'Mapodisi'}:</span>
-                  <span className="number-value">911</span>
-                </div>
-                <div className="emergency-item">
-                  <span className="number-label">{language === 'en' ? 'Fire' : 'Mello'}:</span>
-                  <span className="number-value">998</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Link to="/emergency" className="emergency-btn">
-            {language === 'en' ? 'Full Emergency Info' : 'Tshedimosetso e e Tlatsetsang ya Tšhogo'}
-          </Link>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="footer-main">
         <div className="footer-inner">
@@ -68,7 +39,6 @@ export default function Footer() {
             <h4>{language === 'en' ? 'Ministry' : 'Lefapha'}</h4>
             <Link to="/about">{t.about}</Link>
             <Link to="/policy">{t.policy}</Link>
-            {/* Removed LanguageSwitcher and ThemeToggle from footer */}
           </div>
         </div>
       </div>
