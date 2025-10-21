@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
+import DataVisualization from "../components/DataVisualization";
 import languagePack from "../utils/language";
 import { announcements } from "../utils/data";
 import { useAppContext } from "../utils/AppContext";
@@ -138,6 +139,11 @@ export default function Home() {
 
         </div>
       </div>
+
+      {/* DATA VISUALIZATION SECTION */}
+      <section className="data-viz-section">
+        <DataVisualization />
+      </section>
 
       {/* CHATBOT PROMPT */}
       <section className="chatbot-prompt compact">
