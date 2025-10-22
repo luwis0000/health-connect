@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import AccessibilityPanel from "./AccessibilityPanel";
 import languagePack from "../utils/language";
 import { useAppContext } from "../utils/AppContext";
-import "../styles/Components.css"; // Keep global component styles
+import "../styles/Components.css";
 
 export default function Navbar() {
   const { language } = useAppContext();
@@ -39,7 +39,6 @@ export default function Navbar() {
           {/* Brand Section */}
           <NavLink to="/" className="brand">
             <div className="brand-content">
-              {/* ✅ Unique Logo Wrapper (no style clash) */}
               <div className="navbar-logo-wrapper">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/icons/Code-of-Arms-colour.png`}
@@ -47,7 +46,6 @@ export default function Navbar() {
                   className="navbar-logo-img"
                 />
               </div>
-
               <div className="brand-text">
                 <div className="brand-title">{t.siteTitle}</div>
                 <div className="brand-subtitle">
@@ -93,6 +91,7 @@ export default function Navbar() {
             <span className="emergency-icon">🚨</span>
             <span>{language === "en" ? "Emergency" : "Tšhogo"}</span>
           </NavLink>
+          {/* Remove compact prop to show text on desktop */}
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

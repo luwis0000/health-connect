@@ -1,57 +1,36 @@
-/* MOBILE CONTAINER FIXES */
-.app-root {
-  width: 100%;
-  min-height: 100vh;
+/* Emergency ThemeToggle overflow fix */
+.nav-tools {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  min-width: 0; /* Allow shrinking */
 }
 
-.mobile-container {
-  max-width: 100%;
-  overflow-x: hidden;
+.theme-toggle {
+  min-width: auto !important;
+  padding: 0.4rem !important;
+  width: auto !important;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  flex: 1;
+.lang-switch {
+  min-width: auto !important;
+  padding: 0.4rem !important;
+  width: auto !important;
 }
 
-.main-content {
-  flex: 1;
-  width: 100%;
-}
-
-/* Force mobile layout */
+/* Mobile specific fixes */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
+  .theme-toggle {
+    padding: 0.3rem !important;
   }
   
-  .app-root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  .lang-switch {
+    padding: 0.3rem !important;
   }
   
-  /* Ensure all direct children stack properly */
-  .app-root > * {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-/* Emergency mobile override */
-@media (max-width: 768px) {
-  * {
-    max-width: 100% !important;
-  }
-  
-  .app-root > div {
-    display: flex !important;
-    flex-direction: column !important;
+  .nav-tools {
+    gap: 0.25rem;
   }
 }
 /* Buttons */
