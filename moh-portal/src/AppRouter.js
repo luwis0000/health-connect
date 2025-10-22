@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Careers from "./pages/Careers";
 import Emergency from "./pages/Emergency";
 import Policy from "./pages/Policy";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 export default function AppRouter() {
@@ -41,6 +42,7 @@ export default function AppRouter() {
   const CareersComp = validateComponent('Careers', Careers);
   const EmergencyComp = validateComponent('Emergency', Emergency);
   const PolicyComp = validateComponent('Policy', Policy);
+  const AnalyticsComp = validateComponent('Analytics', Analytics);
   const NotFoundComp = validateComponent('NotFound', NotFound);
 
   return (
@@ -56,6 +58,7 @@ export default function AppRouter() {
       <Route path="/careers" element={<CareersComp />} />
       <Route path="/emergency" element={<EmergencyComp />} />
       <Route path="/policy" element={<PolicyComp />} />
+      <Route path="/analytics" element={<AnalyticsComp />} />
       <Route path="*" element={<NotFoundComp />} />
     </Routes>
   );

@@ -5,6 +5,7 @@ import languagePack from "../utils/language";
 import { announcements } from "../utils/data";
 import { useAppContext } from "../utils/AppContext";
 import { Link } from "react-router-dom";
+import VoiceAssistant from "../components/VoiceAssistant";
 
 export default function Home() {
   const { language } = useAppContext();
@@ -162,6 +163,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* VOICE ASSISTANT */}
+      <VoiceAssistant />
     </div>
   );
 }

@@ -17,8 +17,10 @@ export default function App() {
             <AppRouter />
           </main>
           <Footer />
-          <ChatbotWidget />
+            <ChatbotWidget />
+          {/* Both components handle their own positioning via CSS */}
           <VoiceAssistant />
+        
         </div>
       </BrowserRouter>
     </AppProvider>

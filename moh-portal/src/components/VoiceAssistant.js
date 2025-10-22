@@ -245,25 +245,24 @@ export default function VoiceAssistant() {
 
   return (
     <div className="voice-assistant">
-      {/* Floating Button */}
-      {!showAssistant && (
-        <button 
-          className="voice-floating-btn"
-          onClick={toggleAssistant}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              toggleAssistant();
-            }
-          }}
-          aria-label={language === 'en' ? 'Open voice assistant' : 'Bula motsaedi wa puo'}
-        >
-          {/* Inline SVG used instead of emoji for consistent rendering across platforms */}
-          <svg className="voice-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
-            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2z" fill="currentColor" />
-            <path d="M19 11v1a7 7 0 0 1-14 0v-1H3v1a9 9 0 0 0 8 8.94V22h2v-1.06A9 9 0 0 0 21 12v-1h-2z" fill="currentColor" opacity="0.0"/>
-          </svg>
-        </button>
-      )}
+      {/* Floating Button - Always show when window is closed */}
+      <button 
+        className="voice-floating-btn"
+        onClick={toggleAssistant}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            toggleAssistant();
+          }
+        }}
+        aria-label={language === 'en' ? 'Open voice assistant' : 'Bula motsaedi wa puo'}
+        style={{ display: showAssistant ? 'none' : 'flex' }}
+      >
+        {/* Inline SVG used instead of emoji for consistent rendering across platforms */}
+        <svg className="voice-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2z" fill="currentColor" />
+          <path d="M19 11v1a7 7 0 0 1-14 0v-1H3v1a9 9 0 0 0 8 8.94V22h2v-1.06A9 9 0 0 0 21 12v-1h-2z" fill="currentColor" opacity="0.0"/>
+        </svg>
+      </button>
 
       {/* Assistant Window */}
       {showAssistant && (
