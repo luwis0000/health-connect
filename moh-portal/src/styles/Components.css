@@ -4279,13 +4279,21 @@ body > div:last-child .privacy-links,
     font-size: 0.8rem;
   }
 }
-.brand-logo .logo-img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  margin-right: 10px;
-  vertical-align: middle;
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;           /* 🔧 Remove extra padding */
+  margin: 0;
 }
+
+/* Make the logo image the right size */
+.brand-logo .logo-img {
+  width: 45px;          /* ✅ Adjust as needed (try 40–50px) */
+  height: auto;
+  object-fit: contain;
+}
+
 
 .brand-content {
   display: flex;
@@ -5399,4 +5407,25 @@ body > div:last-child .privacy-links,
 
 .btn.secondary:hover {
   background-color: #5a6268;
+}
+/* === Navbar Unique Logo Section (no conflict) === */
+.navbar-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: transparent;
+}
+
+.navbar-logo-img {
+  width: 52px; /* Adjust logo size */
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.navbar-logo-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }

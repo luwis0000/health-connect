@@ -10,17 +10,16 @@ import VoiceAssistant from "./components/VoiceAssistant";
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      {/* 👇 Add basename for subpath */}
+      <BrowserRouter basename="/health-connect">
         <div className="app-root">
           <Navbar />
           <main className="main-content">
             <AppRouter />
           </main>
           <Footer />
-            <ChatbotWidget />
-          {/* Both components handle their own positioning via CSS */}
+          <ChatbotWidget />
           <VoiceAssistant />
-        
         </div>
       </BrowserRouter>
     </AppProvider>
