@@ -10,11 +10,11 @@ import VoiceAssistant from "./components/VoiceAssistant";
 export default function App() {
   return (
     <AppProvider>
-      {/* 👇 Add basename for subpath */}
       <BrowserRouter basename="/health-connect">
-        <div className="app-root">
+        {/* ADD THESE MOBILE CLASSES */}
+        <div className="app-root mobile-container">
           <Navbar />
-          <main className="main-content">
+          <main className="main-content container">
             <AppRouter />
           </main>
           <Footer />

@@ -1,3 +1,59 @@
+/* MOBILE CONTAINER FIXES */
+.app-root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Force mobile layout */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Ensure all direct children stack properly */
+  .app-root > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Emergency mobile override */
+@media (max-width: 768px) {
+  * {
+    max-width: 100% !important;
+  }
+  
+  .app-root > div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
 /* Buttons */
 .btn { padding:.55rem .9rem; border-radius:8px; border:none; cursor:pointer; font-weight:600; transition: all 0.2s ease; }
 .btn.primary { background:var(--primary); color:white; }
