@@ -39,10 +39,51 @@ export default function Home() {
       {/* MAIN CONTENT GRID - PROFESSIONAL LAYOUT */}
       <div className="professional-layout-grid">
         
-        {/* LEFT COLUMN - Quick Access & Services */}
+        {/* LEFT COLUMN - Minister & Quick Access */}
         <div className="left-column">
           
-          {/* QUICK ACCESS */}
+          {/* MINISTRY CONNECT - NOW ON TOP */}
+          <section className="ministry-connect card-glossy">
+            <div className="connect-header">
+              <h3>{language === "en" ? "Botswana Health Connect" : "Bophelo Botswana Connect"}</h3>
+              <p>
+                {language === "en"
+                  ? "Connecting citizens with reliable healthcare services and national programs."
+                  : "Re golaganya batho le ditirelo tsa bophelo tsa boammaaruri le mananeo a naga."}
+              </p>
+            </div>
+            <div className="minister-info">
+              <div className="minister-photo">
+                <img 
+                  src={process.env.PUBLIC_URL + "/assets/images/nav-gallery/healthcare-3.jpg"} 
+                  alt="Dr. Stephen Modise - Minister of Health"
+                  className="minister-image"
+                  onError={(e) => {
+                    console.log('Image failed to load');
+                    e.target.style.backgroundColor = '#ccc';
+                    e.target.style.display = 'flex';
+                    e.target.style.alignItems = 'center';
+                    e.target.style.justifyContent = 'center';
+                    e.target.innerHTML = 'Image Not Found';
+                  }}
+                />
+              </div>
+              <div className="minister-text">
+                <h4>Dr. Stephen Modise</h4>
+                <p>{language === "en" ? "Minister of Health" : "Tona ya Bophelo"}</p>
+                <p className="quote">
+                  "{language === "en"
+                    ? "Committed to quality healthcare for all."
+                    : "O ikemiseditse go naya Batho botlhe tlhokomelo ya boleng."}"
+                </p>
+                <Link to="/about" className="btn secondary small-btn">
+                  {language === "en" ? "Learn More" : "Ithute Gape"}
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* QUICK ACCESS - NOW BELOW MINISTER */}
           <section className="quick-access-section">
             <h2>{language === "en" ? "Quick Access" : "Go Fitišega ka Bonako"}</h2>
             <div className="quick-access-grid">
@@ -64,35 +105,6 @@ export default function Home() {
                 footer={<Link to="/emergency" className="btn emergency">{language === "en" ? "Call" : "Bitsa"}</Link>}
                 className="card-glossy emergency square-card compact"
               />
-            </div>
-          </section>
-
-          {/* MINISTRY CONNECT */}
-          <section className="ministry-connect card-glossy">
-            <div className="connect-header">
-              <h3>{language === "en" ? "Botswana Health Connect" : "Bophelo Botswana Connect"}</h3>
-              <p>
-                {language === "en"
-                  ? "Connecting citizens with reliable healthcare services and national programs."
-                  : "Re golaganya batho le ditirelo tsa bophelo tsa boammaaruri le mananeo a naga."}
-              </p>
-            </div>
-            <div className="minister-info">
-              <div className="minister-photo">
-                <span>👨‍⚕️</span>
-              </div>
-              <div className="minister-text">
-                <h4>Dr. Stephen Modise</h4>
-                <p>{language === "en" ? "Minister of Health" : "Tona ya Bophelo"}</p>
-                <p className="quote">
-                  "{language === "en"
-                    ? "Committed to quality healthcare for all."
-                    : "O ikemiseditse go naya Batho botlhe tlhokomelo ya boleng."}"
-                </p>
-                <Link to="/about" className="btn secondary small-btn">
-                  {language === "en" ? "Learn More" : "Ithute Gape"}
-                </Link>
-              </div>
             </div>
           </section>
 
