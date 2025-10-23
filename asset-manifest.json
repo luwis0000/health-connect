@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/health-connect/static/css/main.9ff8dae0.css",
+    "main.js": "/health-connect/static/js/main.42315314.js",
+    "index.html": "/health-connect/index.html",
+    "main.9ff8dae0.css.map": "/health-connect/static/css/main.9ff8dae0.css.map",
+    "main.42315314.js.map": "/health-connect/static/js/main.42315314.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ff8dae0.css",
+    "static/js/main.42315314.js"
+  ]
+}
